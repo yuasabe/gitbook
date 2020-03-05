@@ -14,6 +14,8 @@ description: 32 bit Operating System based on the book「30日でできる! OS�
 
 開発環境を作るにおいて、@noanoa07さんの[『30日でできる！OS自作入門』 for macOS Catalina](https://github.com/noanoa07/myHariboteOS) を参考にさせていただきました。書籍付属の著者作成の独自ツール（tolsetツール）は元々Windows用であり、MacOSでは動きません。そのためMacOS向けの開発環境を用意してくださっている@sandaiさんの[https://github.com/sandai/30nichideosjisaku](https://github.com/sandai/30nichideosjisaku) などを参考にさせていただきましたが、ここにあるMac向けツール「TolsetOSX」をCatalinaで動かすことができなかったので、結局@noanoa07さんが行っていた方法で自分もやってみようかと思いました。ご丁寧に情報をまとめて下さりありがとうございます。ツールの使い方や代替方法は[『30日でできる！OS自作入門』を macOS Catalina で実行する](https://qiita.com/noanoa07/items/8828c37c2e286522c7ee) に沿ってやってみました。
 
+作業中のレポは[yuasabe](https://github.com/yuasabe)/[**myos**](https://github.com/yuasabe/myos) ****にあります。
+
 ### Day 3 - 9 : ついにC言語導入へ
 
 bootpack.cをコンパイルするために[https://vanya.jp.net/os/haribote.html\#hrb](https://vanya.jp.net/os/haribote.html#hrb) にある「OS用リンクスクリプト」を使わせて頂きました。このファイルをhrd.ldとして作成し、これをリンクしてコンパイルしました。コンパイルするには、リンクスクリプトを-Tで指定できるよう[i386-elf-gcc](https://github.com/nativeos/homebrew-i386-elf-toolchain)を使いました。
@@ -97,7 +99,9 @@ void HariMain(void) {
 ```
 {% endcode %}
 
-Makefileでnaskfunc.oを新しくelf形式でアセンブルし、bootpack.hrbをコンパイルする際にリンクする。make runして同じく黒い画面が表示されれば良い。
+Makefileでnaskfunc.oを新しくelf形式でアセンブルし、bootpack.hrbをコンパイルする際にリンクしました。make runして同じく黒い画面が表示されれば成功です。本の通りにやるとエラーでmakeできなかった箇所があったので[30日OS自作入門-3日目（C言語導入）-](https://motojiroxx.hatenablog.com/entry/2018/06/11/004414) などを参考にさせて頂きました。
+
+
 
 ### 参考文献
 
@@ -109,4 +113,5 @@ Makefileでnaskfunc.oを新しくelf形式でアセンブルし、bootpack.hrb�
 * [『30日でできる！OS自作入門』のメモ](https://vanya.jp.net/os/haribote.html#hrb)
 * [30日OS自作入門-3日目（C言語導入）-](https://motojiroxx.hatenablog.com/entry/2018/06/11/004414)
 * [https://wiki.osdev.org/GCC\_Cross-Compiler](https://wiki.osdev.org/GCC_Cross-Compiler)
+* [NASM - The Netwide Assembler](https://www.nasm.us/doc/nasmdoc0.html)
 
