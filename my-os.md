@@ -74,6 +74,31 @@ clean:
 ```
 {% endcode %}
 
+これでmake run すると下図のような黒い画面が表示されます。
+
+![](.gitbook/assets/screen-shot-2020-03-04-at-13.34.06.png)
+
+### Day 3-10 : とにかくHLTしたい
+
+naskfunc.nasを作成し、io\_hlt関数を新しく定義する。アセンブリの中身はHLTとRETをするだけです。bootpack.cでio\_hlt関数を使えるように以下のように更新する。
+
+{% code title="bootpack.c" %}
+```c
+
+extern void io_hlt(void);
+
+void HariMain(void) {
+
+	fin:
+		io_hlt();
+		goto fin;
+
+}
+```
+{% endcode %}
+
+Makefileでnaskfunc.oを新しくelf形式でアセンブルし、bootpack.hrbをコンパイルする際にリンクする。make runして同じく黒い画面が表示されれば良い。
+
 ### 参考文献
 
 多くの方々のQiita記事やブログ記事、Githubレポを参考にさせて頂きました。自分も早く成長して他の人のためになれるような発信をしていきたいです。
@@ -82,4 +107,6 @@ clean:
 * \*\*\*\*[sandai](https://github.com/sandai)/[30nichideosjisaku](https://github.com/sandai/30nichideosjisaku)
 * \*\*\*\*[noanoa07](https://github.com/noanoa07)/[myHariboteOS](https://github.com/noanoa07/myHariboteOS)
 * [『30日でできる！OS自作入門』のメモ](https://vanya.jp.net/os/haribote.html#hrb)
-* 
+* [30日OS自作入門-3日目（C言語導入）-](https://motojiroxx.hatenablog.com/entry/2018/06/11/004414)
+* [https://wiki.osdev.org/GCC\_Cross-Compiler](https://wiki.osdev.org/GCC_Cross-Compiler)
+
