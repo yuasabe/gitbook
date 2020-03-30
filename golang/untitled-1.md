@@ -14,13 +14,13 @@ Go Programming Blueprints by Mat Ryer. [Book Source Github](https://github.com/m
 
 Set `GOPATH`. Edit the `~/.zshrc` file and add following line.
 
-```text
+```bash
 export GOPATH=$HOME/go
 ```
 
 Source the file.
 
-```text
+```bash
 source ~/.zshrc
 ```
 
