@@ -1,4 +1,8 @@
-# Initial page
+---
+description: My Knowledge Base
+---
+
+# Welcome
 
 ## Getting Super Powers
 
