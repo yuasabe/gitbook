@@ -66,6 +66,7 @@ if __name__ == "__main__":
 
 ### Slack Notification
 
+{% code title="slack\_notification.py" %}
 ```python
 import slackweb
 from config import config
@@ -81,9 +82,11 @@ def slack_notify(text_="", link_=""):
 def slack_notify_text(text_="", link_=""):
 	slack.notify(text=link_ + text_)
 ```
+{% endcode %}
 
 ### Config file and config.py
 
+{% code title="config.py" %}
 ```python
 import configparser
 import re
@@ -102,6 +105,7 @@ def update_recent_text(new_text):
 			f.write(line)
 
 ```
+{% endcode %}
 
 {% code title="config.ini" %}
 ```python
