@@ -120,3 +120,11 @@ recent_text = test
 ```
 {% endcode %}
 
+### References
+
+* [https://api.slack.com/reference/surfaces/formatting\#block-formatting](https://api.slack.com/reference/surfaces/formatting#block-formatting)
+* [https://github.com/satoshi03/slack-python-webhook](https://github.com/satoshi03/slack-python-webhook)
+* [https://crontab.guru/\#0,15,30,45\_\*\_\*\_\*\_\*](https://crontab.guru/#0,15,30,45_*_*_*_*)
+* [https://www.crummy.com/software/BeautifulSoup/bs4/doc/\#searching-the-tree](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree)
+* [https://qiita.com/taka-kawa/items/f0597b2f375da7ddbb73](https://qiita.com/taka-kawa/items/f0597b2f375da7ddbb73)
+
