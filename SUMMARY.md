@@ -13,4 +13,5 @@
 * [Weekly Tech Meetings @Gracia](untitled.md)
 * [Micro Hardening Memo](micro-hardening-memo.md)
 * [Web Scraping with Python](web-scraping-with-python.md)
+* [Playing with Arduinos](playing-with-arduinos.md)
 
