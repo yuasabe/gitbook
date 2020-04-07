@@ -234,7 +234,7 @@ Over on the AWS demo server, the `/httpd/access.log` is as below.
 
 Now until here, connecting to WiFi, sending a HTTP request wasn't hard at all. Just fiddling through the example files would do it. It's amazing how easy life can be with the right tools and libraries.
 
-### Making the API server with Python
+## Making the API server with Python
 
 So now we have been able to retreive data with the DHT11 sensor, connect to a local WiFi network using ESP32, and have been able to send a HTTP GET request to a server.
 
@@ -321,33 +321,19 @@ $
 
 [How to post JSON data to a HTTP server endpoint from your ESP32 development board with ArduinoJson](https://www.techcoil.com/blog/how-to-post-json-data-to-a-http-server-endpoint-from-your-esp32-development-board-with-arduinojson/)
 
-### リアルタイムのアナリティクス管理画面をつくる
+## Real-time Analytics Dashboard using Socket.io
 
-センサーデータをグラフにしてリアルタイムに表示したい。Push型通知でリアルタイムに表示したいので、簡単なところで行けばsocket.ioなどが良さそう。Nodejs環境を立てて、Expressアプリを立ち上げるところから始める。
+Using the data collected by the IoT sensors, I wanted to make a dashboard that displays the information as graphs in a real time manner. Probably using socket.io is the fastest way to achieve this. Since I started working with Flask, I will use the [flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) library in Python.
 
-#### nodeを最新版にアップグレードする
+### Using `flask-SocketIO`
 
-Simple way to upgrade `node` is to use the `n` version manager.
+I will continue using the [yuasabe/iot\_api](https://github.com/yuasabe/iot_api) repository for the dashboard part too.
 
-```text
-$ npm install -g n
-$ npm cache clean -f
-```
-
-Upgrading is as simple as
+Install flask-socketIO with:
 
 ```text
-$ sudo n stable
-$ npm update -g
-$ node -v
-v12.16.1
+pip3 install flask-socketio
 ```
-
-#### socket.ioを設定する
-
-[socket.io Getting Started](https://socket.io/get-started/chat/)
-
-[flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)
 
 ### Miscellaneous Info
 
